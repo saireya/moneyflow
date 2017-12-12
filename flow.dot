@@ -44,6 +44,7 @@ digraph "MoneyFlow"
 		家賃;
 		// コンビニ
 		ローソン;
+		セブンイレブン;
 		ファミリーマート;
 		// 交通
 		電車;
@@ -67,6 +68,7 @@ digraph "MoneyFlow"
 	現金 -> 商店街 [style="bold", weight=100];
 	商店街 -> エコポイント -> 商店街;
 	現金 -> ローソン [style="bold", weight=100];
+	現金 -> セブンイレブン [style="bold", weight=100];
 	現金 -> ファミリーマート [style="bold", weight=100];
 	現金 -> 生協電子マネー [style="bold", weight=100];
 	生協電子マネー -> 生協 [style="bold", weight=100];
