@@ -86,7 +86,6 @@ digraph "MoneyFlow"
 	}
 
 	// SMBC
-	給与 -> 三井住友銀行 [style="bold", weight=100];
 	奨学金 -> 三井住友銀行 [style="bold", weight=100];
 	仕送り -> 三井住友銀行 [style="bold", weight=100];
 	三井住友銀行 -> 現金, 関西電力 [style="bold", weight=100];
