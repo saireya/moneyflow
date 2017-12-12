@@ -67,6 +67,7 @@ digraph "MoneyFlow"
 		ココカラファイン;
 		ダイコクドラッグ;
 		ビックカメラ;
+		ヨドバシカメラ;
 		餃子の王将;
 		// ネット
 		Amazon;
@@ -77,10 +78,11 @@ digraph "MoneyFlow"
 	給与 -> 三井住友銀行 [style="bold", weight=100];
 	奨学金 -> 三井住友銀行 [style="bold", weight=100];
 	仕送り -> 三井住友銀行 [style="bold", weight=100];
-	三井住友銀行 -> 現金, 家賃, 関西電力, 大阪ガス, NHK, NTT [style="bold", weight=100];
+	三井住友銀行 -> 現金, 家賃, 関西電力 [style="bold", weight=100];
 
 	// SMBC-Visa
 	三井住友銀行 -> 三井住友VISAカード [style="bold", weight=100];
+	三井住友VISAカード -> 大阪ガス, NHK, NTT [style="bold", weight=100];
 	三井住友VISAカード -> iTunes [style="bold", weight=100];
 	三井住友VISAカード -> Amazon [style="bold", weight=100];
 	三井住友VISAカード -> ワールドプレゼントポイント;
@@ -94,6 +96,7 @@ digraph "MoneyFlow"
 	iD -> ファミリーマート [style="bold", weight=100];
 	iD -> ココカラファイン [style="bold", weight=100];
 	ココカラファイン -> ココカラポイント -> ココカラファイン;
+	iD -> ヨドバシカメラ [style="bold", weight=100];
 	iD -> ワールドプレゼントポイント -> iD;
 
 	// 現金
