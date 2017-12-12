@@ -27,6 +27,7 @@ digraph "MoneyFlow"
 	{
 		rank = same; "マネー";
 		Suica;
+		PiTaPa;
 		生協電子マネー;
 		現金;
 		iD;
@@ -60,6 +61,9 @@ digraph "MoneyFlow"
 		ファミリーマート;
 		// 交通
 		電車;
+		大阪地下鉄;
+		山陽バス;
+		神姫バス;
 		// インフラ
 		NHK;
 		NTT;
@@ -104,6 +108,11 @@ digraph "MoneyFlow"
 	ココカラファイン -> ココカラポイント -> ココカラファイン;
 	iD -> ヨドバシカメラ [style="bold", weight=100];
 	iD -> ワールドプレゼントポイント -> iD;
+	// PiTaPa
+	三井住友VISAカード -> PiTaPa [style="bold", weight=100];
+	PiTaPa -> 大阪地下鉄 [style="bold", weight=100];
+	PiTaPa -> 神姫バス [style="bold", weight=100];
+	PiTaPa -> 山陽バス [style="bold", weight=100];
 
 	// ビックカメラSuicaカード
 	三井住友銀行 -> ビックカメラSuicaカード [style="bold", weight=100];
