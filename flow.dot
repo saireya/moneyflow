@@ -7,6 +7,7 @@ digraph "MoneyFlow"
 	"収入" -> "銀行口座" -> "クレジットカード" -> "マネー" -> "ポイント" -> "金券" -> "支出" [arrowhead = none];
 	{
 		rank = same; "収入";
+		給与;
 		奨学金;
 		仕送り;
 	}
@@ -72,6 +73,7 @@ digraph "MoneyFlow"
 	}
 
 	// SMBC
+	給与 -> 三井住友銀行 [style="bold", weight=100];
 	奨学金 -> 三井住友銀行 [style="bold", weight=100];
 	仕送り -> 三井住友銀行 [style="bold", weight=100];
 	三井住友銀行 -> 現金, 家賃, 関西電力, 大阪ガス, NHK, NTT [style="bold", weight=100];
