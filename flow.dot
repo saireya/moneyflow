@@ -82,6 +82,8 @@ digraph "MoneyFlow"
 	三井住友VISAカード -> Amazon [style="bold", weight=100];
 	三井住友VISAカード -> ワールドプレゼントポイント;
 	Amazon -> Amazonポイント -> Amazon;
+	三井住友VISAカード -> ビックカメラ [style="bold", weight=100];
+	ビックカメラ -> ビックポイント -> ビックカメラ;
 
 	// 現金
 	現金 -> 商店街 [style="bold", weight=100];
@@ -95,8 +97,6 @@ digraph "MoneyFlow"
 	現金 -> ココカラファイン [style="bold", weight=100];
 	ココカラファイン -> ココカラポイント -> ココカラファイン;
 	現金 -> ダイコクドラッグ [style="bold", weight=100];
-	現金 -> ビックカメラ [style="bold", weight=100];
-	ビックカメラ -> ビックポイント -> ビックカメラ;
 	現金 -> 餃子の王将 [style="bold", weight=100];
 
 	現金 -> ICOCA -> 電車 [style="bold", weight=100];
