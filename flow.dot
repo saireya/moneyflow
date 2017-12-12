@@ -27,6 +27,7 @@ digraph "MoneyFlow"
 		ICOCA;
 		生協電子マネー;
 		現金;
+		iD;
 	}
 
 	{
@@ -86,18 +87,21 @@ digraph "MoneyFlow"
 	Amazon -> Amazonポイント -> Amazon;
 	三井住友VISAカード -> ビックカメラ [style="bold", weight=100];
 	ビックカメラ -> ビックポイント -> ビックカメラ;
+	// iD
+	三井住友VISAカード -> iD [style="bold", weight=100];
+	iD -> ローソン [style="bold", weight=100];
+	iD -> セブンイレブン [style="bold", weight=100];
+	iD -> ファミリーマート [style="bold", weight=100];
+	iD -> ココカラファイン [style="bold", weight=100];
+	ココカラファイン -> ココカラポイント -> ココカラファイン;
+	iD -> ワールドプレゼントポイント -> iD;
 
 	// 現金
 	現金 -> 商店街 [style="bold", weight=100];
 	商店街 -> エコポイント -> 商店街;
-	現金 -> ローソン [style="bold", weight=100];
-	現金 -> セブンイレブン [style="bold", weight=100];
-	現金 -> ファミリーマート [style="bold", weight=100];
 	現金 -> 生協電子マネー [style="bold", weight=100];
 	生協電子マネー -> 生協 [style="bold", weight=100];
 	生協 -> 生協ポイント -> 生協電子マネー;
-	現金 -> ココカラファイン [style="bold", weight=100];
-	ココカラファイン -> ココカラポイント -> ココカラファイン;
 	現金 -> ダイコクドラッグ [style="bold", weight=100];
 	現金 -> 餃子の王将 [style="bold", weight=100];
 
