@@ -47,6 +47,7 @@ digraph "MoneyFlow"
 		ローソン;
 		セブンイレブン;
 		ファミリーマート;
+		デイリーヤマザキ;
 		// 交通
 		電車;
 		// インフラ
@@ -72,6 +73,7 @@ digraph "MoneyFlow"
 	現金 -> ローソン [style="bold", weight=100];
 	現金 -> セブンイレブン [style="bold", weight=100];
 	現金 -> ファミリーマート [style="bold", weight=100];
+	現金 -> デイリーヤマザキ [style="bold", weight=100];
 	現金 -> 生協電子マネー [style="bold", weight=100];
 	生協電子マネー -> 生協 [style="bold", weight=100];
 	生協 -> 生協ポイント -> 生協電子マネー;
