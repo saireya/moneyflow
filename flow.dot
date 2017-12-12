@@ -60,6 +60,7 @@ digraph "MoneyFlow"
 		ココカラファイン;
 		ダイコクドラッグ;
 		ビックカメラ;
+		餃子の王将;
 	}
 
 	// SMBC
@@ -81,6 +82,7 @@ digraph "MoneyFlow"
 	現金 -> ダイコクドラッグ [style="bold", weight=100];
 	現金 -> ビックカメラ [style="bold", weight=100];
 	ビックカメラ -> ビックポイント -> ビックカメラ;
+	現金 -> 餃子の王将 [style="bold", weight=100];
 
 	現金 -> ICOCA -> 電車 [style="bold", weight=100];
 	現金 -> 切符 -> 電車 [style="bold", weight=100];
