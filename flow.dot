@@ -21,11 +21,12 @@ digraph "MoneyFlow"
 	{
 		rank = same; "クレジットカード";
 		三井住友VISAカード;
+		ビックカメラSuicaカード
 	}
 
 	{
 		rank = same; "マネー";
-		ICOCA;
+		Suica;
 		生協電子マネー;
 		現金;
 		iD;
@@ -35,10 +36,12 @@ digraph "MoneyFlow"
 		rank = same; "ポイント";
 		// クレジットカード関係
 		ワールドプレゼントポイント;
+		ビューサンクスポイント;
 		// 独自ポイント
 		エコポイント;
 		生協ポイント;
 		ココカラポイント;
+		Suicaポイント;
 		ビックポイント;
 		Amazonポイント;
 	}
@@ -73,6 +76,7 @@ digraph "MoneyFlow"
 		// ネット
 		Amazon;
 		iTunes;
+		EX予約;
 	}
 
 	// SMBC
@@ -88,8 +92,6 @@ digraph "MoneyFlow"
 	三井住友VISAカード -> Amazon [style="bold", weight=100];
 	三井住友VISAカード -> ワールドプレゼントポイント;
 	Amazon -> Amazonポイント -> Amazon;
-	三井住友VISAカード -> ビックカメラ [style="bold", weight=100];
-	ビックカメラ -> ビックポイント -> ビックカメラ;
 	// iD
 	三井住友VISAカード -> iD [style="bold", weight=100];
 	iD -> ローソン [style="bold", weight=100];
@@ -99,6 +101,16 @@ digraph "MoneyFlow"
 	ココカラファイン -> ココカラポイント -> ココカラファイン;
 	iD -> ヨドバシカメラ [style="bold", weight=100];
 	iD -> ワールドプレゼントポイント -> iD;
+
+	// ビックカメラSuicaカード
+	三井住友銀行 -> ビックカメラSuicaカード [style="bold", weight=100];
+	ビックカメラSuicaカード -> ビューサンクスポイント;
+	ビックカメラSuicaカード -> ビックカメラ [style="bold", weight=100];
+	ビックカメラ -> ビックポイント;
+	ビックカメラSuicaカード -> ビックポイント -> ビックカメラ;
+	ビックカメラSuicaカード -> Suica -> 電車 [style="bold", weight=100];
+	ビックカメラSuicaカード -> EX予約 [style="bold", weight=100];
+	Suica -> Suicaポイント -> Suica;
 
 	// UFJ
 	給与 -> 三菱東京UFJ銀行 [style="bold", weight=100];
@@ -113,7 +125,6 @@ digraph "MoneyFlow"
 	現金 -> ダイコクドラッグ [style="bold", weight=100];
 	現金 -> 餃子の王将 [style="bold", weight=100];
 
-	現金 -> ICOCA -> 電車 [style="bold", weight=100];
 	現金 -> 切符 -> 電車 [style="bold", weight=100];
 	切符 -> 現金;
 } 
