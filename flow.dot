@@ -73,10 +73,12 @@ digraph "MoneyFlow"
 		ビックカメラ;
 		ヨドバシカメラ;
 		餃子の王将;
+		ほっとはあと;
 		// ネット
 		Amazon;
 		iTunes;
 		EX予約;
+		じゃらん;
 	}
 
 	// SMBC
@@ -90,6 +92,7 @@ digraph "MoneyFlow"
 	三井住友VISAカード -> 大阪ガス, NHK, NTT [style="bold", weight=100];
 	三井住友VISAカード -> iTunes [style="bold", weight=100];
 	三井住友VISAカード -> Amazon [style="bold", weight=100];
+	三井住友VISAカード -> じゃらん [style="bold", weight=100];
 	三井住友VISAカード -> ワールドプレゼントポイント;
 	Amazon -> Amazonポイント -> Amazon;
 	// iD
@@ -124,6 +127,7 @@ digraph "MoneyFlow"
 	生協 -> 生協ポイント -> 生協電子マネー;
 	現金 -> ダイコクドラッグ [style="bold", weight=100];
 	現金 -> 餃子の王将 [style="bold", weight=100];
+	現金 -> ほっとはあと [style="bold", weight=100];
 
 	現金 -> 切符 -> 電車 [style="bold", weight=100];
 	切符 -> 現金;
