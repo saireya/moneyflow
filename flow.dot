@@ -32,6 +32,7 @@ digraph "MoneyFlow"
 		エコポイント;
 		生協ポイント;
 		ココカラポイント;
+		ビックポイント;
 	}
 
 	{
@@ -57,6 +58,7 @@ digraph "MoneyFlow"
 		商店街;
 		生協;
 		ココカラファイン;
+		ビックカメラ;
 	}
 
 	// SMBC
@@ -75,6 +77,8 @@ digraph "MoneyFlow"
 	生協 -> 生協ポイント -> 生協電子マネー;
 	現金 -> ココカラファイン [style="bold", weight=100];
 	ココカラファイン -> ココカラポイント -> ココカラファイン;
+	現金 -> ビックカメラ [style="bold", weight=100];
+	ビックカメラ -> ビックポイント -> ビックカメラ;
 
 	現金 -> ICOCA -> 電車 [style="bold", weight=100];
 	現金 -> 切符 -> 電車 [style="bold", weight=100];
