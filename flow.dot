@@ -31,6 +31,7 @@ digraph "MoneyFlow"
 		rank = same; "ポイント";
 		エコポイント;
 		生協ポイント;
+		ココカラポイント;
 	}
 
 	{
@@ -54,6 +55,7 @@ digraph "MoneyFlow"
 		// 店舗
 		商店街;
 		生協;
+		ココカラファイン;
 	}
 
 	// SMBC
@@ -69,6 +71,8 @@ digraph "MoneyFlow"
 	現金 -> 生協電子マネー [style="bold", weight=100];
 	生協電子マネー -> 生協 [style="bold", weight=100];
 	生協 -> 生協ポイント -> 生協電子マネー;
+	現金 -> ココカラファイン [style="bold", weight=100];
+	ココカラファイン -> ココカラポイント -> ココカラファイン;
 
 	現金 -> ICOCA -> 電車 [style="bold", weight=100];
 	現金 -> 切符 -> 電車 [style="bold", weight=100];
