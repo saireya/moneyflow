@@ -1,0 +1,76 @@
+// dot -Tsvg flow.dot -o flow.svg
+digraph "MoneyFlow"
+{
+	node [ shape = box ];
+
+	"収入", "銀行口座", "クレジットカード", "マネー", "ポイント", "金券", "支出" [shape = none];
+	"収入" -> "銀行口座" -> "クレジットカード" -> "マネー" -> "ポイント" -> "金券" -> "支出" [arrowhead = none];
+	{
+		rank = same; "収入";
+		奨学金;
+		仕送り;
+	}
+
+	{
+		rank = same; "銀行口座";
+		三井住友銀行;
+	}
+
+	{
+		rank = same; "クレジットカード";
+	}
+
+	{
+		rank = same; "マネー";
+		ICOCA;
+		生協電子マネー;
+		現金;
+	}
+
+	{
+		rank = same; "ポイント";
+		エコポイント;
+		生協ポイント;
+	}
+
+	{
+		rank = same; "金券";
+		切符;
+	}
+
+	{
+		rank = same; "支出";
+		家賃;
+		// コンビニ
+		ローソン;
+		ファミリーマート;
+		// 交通
+		電車;
+		// インフラ
+		NHK;
+		NTT;
+		関西電力;
+		大阪ガス;
+		// 店舗
+		商店街;
+		生協;
+	}
+
+	// SMBC
+	奨学金 -> 三井住友銀行 [style="bold", weight=100];
+	仕送り -> 三井住友銀行 [style="bold", weight=100];
+	三井住友銀行 -> 現金, 家賃, 関西電力, 大阪ガス, NHK, NTT [style="bold", weight=100];
+
+	// 現金
+	現金 -> 商店街 [style="bold", weight=100];
+	商店街 -> エコポイント -> 商店街;
+	現金 -> ローソン [style="bold", weight=100];
+	現金 -> ファミリーマート [style="bold", weight=100];
+	現金 -> 生協電子マネー [style="bold", weight=100];
+	生協電子マネー -> 生協 [style="bold", weight=100];
+	生協 -> 生協ポイント -> 生協電子マネー;
+
+	現金 -> ICOCA -> 電車 [style="bold", weight=100];
+	現金 -> 切符 -> 電車 [style="bold", weight=100];
+	切符 -> 現金;
+} 
