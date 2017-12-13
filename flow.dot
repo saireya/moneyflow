@@ -74,6 +74,7 @@ digraph "MoneyFlow"
 		// 店舗
 		商店街;
 		アイハート;
+		ウェルシア;
 		ビックカメラ;
 		ヨドバシカメラ;
 		餃子の王将;
@@ -105,6 +106,8 @@ digraph "MoneyFlow"
 	ファミリーマート -> Tポイント;
 	iD -> ヨドバシカメラ [style="bold", weight=100];
 	iD -> ワールドプレゼントポイント -> iD;
+	iD -> ウェルシア [style="bold", weight=100];
+	ウェルシア -> Tポイント;
 	// PiTaPa
 	三井住友VISAカード -> PiTaPa [style="bold", weight=100];
 	PiTaPa -> 大阪地下鉄 [style="bold", weight=100];
