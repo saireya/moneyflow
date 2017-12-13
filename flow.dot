@@ -87,6 +87,7 @@ digraph "MoneyFlow"
 	}
 
 	// SMBC
+	給与 -> 三井住友銀行 [style="bold", weight=100];
 	三井住友銀行 -> 現金, 住信SBI銀行, 関西電力 [style="bold", weight=100];
 
 	// SMBC-Visa
@@ -126,10 +127,6 @@ digraph "MoneyFlow"
 	JMBローソンPontaカード -> nanaco [style="bold", weight=100];
 	nanaco -> セブンイレブン [style="bold", weight=100];
 	nanaco -> nanacoポイント -> nanaco;
-
-	// UFJ
-	給与 -> 三菱東京UFJ銀行 [style="bold", weight=100];
-	三菱東京UFJ銀行 -> 住信SBI銀行 [style="bold", weight=100];
 
 	// 住信SBI
 	住信SBI銀行 -> 現金 [style="bold", weight=100];
