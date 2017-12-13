@@ -42,7 +42,6 @@ digraph "MoneyFlow"
 		ワールドプレゼントポイント;
 		ビューサンクスポイント;
 		// 独自ポイント
-		エコポイント;
 		JREポイント;
 		ビックポイント;
 		Amazonポイント;
@@ -74,7 +73,6 @@ digraph "MoneyFlow"
 		ASAHIネット;
 		関西電力;
 		// 店舗
-		商店街;
 		アイハート;
 		ウェルシア;
 		ビックカメラ;
@@ -141,8 +139,6 @@ digraph "MoneyFlow"
 	nanaco -> nanacoポイント -> nanaco;
 
 	// 現金
-	現金 -> 商店街 [style="bold", weight=100];
-	商店街 -> エコポイント -> 商店街;
 	現金 -> FRESCO [style="bold", weight=100];
 	FRESCO -> FRESCOポイント -> FRESCO;
 	現金 -> ぐるなびギフト券 -> 餃子の王将 [style="bold", weight=100];
