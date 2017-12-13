@@ -43,7 +43,7 @@ digraph "MoneyFlow"
 		ビューサンクスポイント;
 		// 独自ポイント
 		エコポイント;
-		Suicaポイント;
+		JREポイント;
 		ビックポイント;
 		Amazonポイント;
 		nanacoポイント;
@@ -110,7 +110,7 @@ digraph "MoneyFlow"
 	ビックカメラSuicaカード -> ビックポイント -> ビックカメラ;
 	ビックカメラSuicaカード -> Suica -> 電車 [style="bold", weight=100];
 	ビックカメラSuicaカード -> EX予約 [style="bold", weight=100];
-	Suica -> Suicaポイント -> Suica;
+	Suica -> JREポイント -> Suica;
 
 	// 住信SBI
 	住信SBI銀行 -> 現金 [style="bold", weight=100];
