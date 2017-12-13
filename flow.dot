@@ -102,15 +102,6 @@ digraph "MoneyFlow"
 	三井住友VISAカード -> アイハート [style="bold", weight=100];
 	三井住友VISAカード -> ワールドプレゼントポイント;
 	Amazon -> Amazonポイント -> Amazon;
-	// iD
-	三井住友VISAカード -> iD [style="bold", weight=100];
-	iD -> ローソン [style="bold", weight=100];
-	iD -> ファミリーマート [style="bold", weight=100];
-	ファミリーマート -> Tポイント;
-	iD -> ヨドバシカメラ [style="bold", weight=100];
-	iD -> ワールドプレゼントポイント -> iD;
-	iD -> ウェルシア [style="bold", weight=100];
-	ウェルシア -> Tポイント;
 	// PiTaPa
 	三井住友VISAカード -> PiTaPa [style="bold", weight=100];
 	PiTaPa -> 大阪地下鉄 [style="bold", weight=100];
@@ -131,6 +122,15 @@ digraph "MoneyFlow"
 	JMBローソンPontaカード -> nanaco [style="bold", weight=100];
 	nanaco -> セブンイレブン [style="bold", weight=100];
 	nanaco -> nanacoポイント -> nanaco;
+	// iD
+	JMBローソンPontaカード -> iD [style="bold", weight=100];
+	iD -> ローソン [style="bold", weight=100];
+	iD -> ファミリーマート [style="bold", weight=100];
+	ファミリーマート -> Tポイント;
+	iD -> ヨドバシカメラ [style="bold", weight=100];
+	iD -> Ponta;
+	iD -> ウェルシア [style="bold", weight=100];
+	ウェルシア -> Tポイント;
 
 	// 住信SBI
 	住信SBI銀行 -> 現金 [style="bold", weight=100];
