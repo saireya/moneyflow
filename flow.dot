@@ -43,7 +43,6 @@ digraph "MoneyFlow"
 		ビューサンクスポイント;
 		// 独自ポイント
 		エコポイント;
-		ココカラポイント;
 		Suicaポイント;
 		ビックポイント;
 		Amazonポイント;
@@ -76,7 +75,6 @@ digraph "MoneyFlow"
 		// 店舗
 		商店街;
 		アイハート;
-		ココカラファイン;
 		ビックカメラ;
 		ヨドバシカメラ;
 		餃子の王将;
@@ -105,8 +103,6 @@ digraph "MoneyFlow"
 	iD -> ローソン [style="bold", weight=100];
 	iD -> ファミリーマート [style="bold", weight=100];
 	ファミリーマート -> Tポイント;
-	iD -> ココカラファイン [style="bold", weight=100];
-	ココカラファイン -> ココカラポイント -> ココカラファイン;
 	iD -> ヨドバシカメラ [style="bold", weight=100];
 	iD -> ワールドプレゼントポイント -> iD;
 	// PiTaPa
