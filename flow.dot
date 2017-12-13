@@ -35,6 +35,8 @@ digraph "MoneyFlow"
 
 	{
 		rank = same; "ポイント";
+		// 共通ポイント
+		Tポイント;
 		// クレジットカード関係
 		ワールドプレゼントポイント;
 		ビューサンクスポイント;
@@ -102,6 +104,7 @@ digraph "MoneyFlow"
 	iD -> ローソン [style="bold", weight=100];
 	iD -> セブンイレブン [style="bold", weight=100];
 	iD -> ファミリーマート [style="bold", weight=100];
+	ファミリーマート -> Tポイント;
 	iD -> ココカラファイン [style="bold", weight=100];
 	ココカラファイン -> ココカラポイント -> ココカラファイン;
 	iD -> ヨドバシカメラ [style="bold", weight=100];
