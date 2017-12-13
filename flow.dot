@@ -8,8 +8,6 @@ digraph "MoneyFlow"
 	{
 		rank = same; "収入";
 		給与;
-		奨学金;
-		仕送り;
 	}
 
 	{
@@ -29,7 +27,6 @@ digraph "MoneyFlow"
 		rank = same; "マネー";
 		Suica;
 		PiTaPa;
-		生協電子マネー;
 		現金;
 		iD;
 	}
@@ -43,7 +40,6 @@ digraph "MoneyFlow"
 		ビューサンクスポイント;
 		// 独自ポイント
 		エコポイント;
-		生協ポイント;
 		ココカラポイント;
 		Suicaポイント;
 		ビックポイント;
@@ -75,7 +71,6 @@ digraph "MoneyFlow"
 		大阪ガス;
 		// 店舗
 		商店街;
-		生協;
 		アイハート;
 		ココカラファイン;
 		ビックカメラ;
@@ -90,8 +85,6 @@ digraph "MoneyFlow"
 	}
 
 	// SMBC
-	奨学金 -> 三井住友銀行 [style="bold", weight=100];
-	仕送り -> 三井住友銀行 [style="bold", weight=100];
 	三井住友銀行 -> 現金, 住信SBI銀行, 関西電力 [style="bold", weight=100];
 
 	// SMBC-Visa
@@ -140,9 +133,6 @@ digraph "MoneyFlow"
 	// 現金
 	現金 -> 商店街 [style="bold", weight=100];
 	商店街 -> エコポイント -> 商店街;
-	現金 -> 生協電子マネー [style="bold", weight=100];
-	生協電子マネー -> 生協 [style="bold", weight=100];
-	生協 -> 生協ポイント -> 生協電子マネー;
 	現金 -> 餃子の王将 [style="bold", weight=100];
 	現金 -> ほっとはあと [style="bold", weight=100];
 
