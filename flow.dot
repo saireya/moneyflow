@@ -74,6 +74,7 @@ digraph "MoneyFlow"
 		// 店舗
 		商店街;
 		生協;
+		アイハート;
 		ココカラファイン;
 		ビックカメラ;
 		ヨドバシカメラ;
@@ -97,6 +98,7 @@ digraph "MoneyFlow"
 	三井住友VISAカード -> iTunes [style="bold", weight=100];
 	三井住友VISAカード -> Amazon [style="bold", weight=100];
 	三井住友VISAカード -> じゃらん [style="bold", weight=100];
+	三井住友VISAカード -> アイハート [style="bold", weight=100];
 	三井住友VISAカード -> ワールドプレゼントポイント;
 	Amazon -> Amazonポイント -> Amazon;
 	// iD
