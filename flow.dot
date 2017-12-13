@@ -46,6 +46,7 @@ digraph "MoneyFlow"
 		ビックポイント;
 		Amazonポイント;
 		nanacoポイント;
+		FRESCOポイント;
 	}
 
 	{
@@ -80,6 +81,7 @@ digraph "MoneyFlow"
 		ヨドバシカメラ;
 		餃子の王将;
 		ほっとはあと;
+		FRESCO;
 		// ネット
 		Amazon;
 		iTunes;
@@ -139,6 +141,8 @@ digraph "MoneyFlow"
 	// 現金
 	現金 -> 商店街 [style="bold", weight=100];
 	商店街 -> エコポイント -> 商店街;
+	現金 -> FRESCO [style="bold", weight=100];
+	FRESCO -> FRESCOポイント -> FRESCO;
 	現金 -> ぐるなびギフト券 -> 餃子の王将 [style="bold", weight=100];
 	ぐるなびギフト券 -> 現金;
 	現金 -> ほっとはあと [style="bold", weight=100];
