@@ -125,11 +125,7 @@ digraph "MoneyFlow"
 	// 住信SBI
 	住信SBI銀行 -> 現金 [style="bold", weight=100];
 	住信SBI銀行 -> 家賃 [style="bold", weight=100];
-<<<<<<< HEAD
 	住信SBI銀行 -> JMBローソンPontaカード, ビックカメラSuicaカード, リクルートカード [style="bold", weight=100];
-=======
-	住信SBI銀行 -> JMBローソンPontaカード, リクルートカード [style="bold", weight=100];
->>>>>>> e8407ca... 2017/08: Added RecruitCard
 
 	// リクルートカード
 	リクルートカード -> NHK, NTT, ASAHIネット [style="bold", weight=100];
