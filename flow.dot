@@ -20,7 +20,6 @@ digraph "MoneyFlow"
 		rank = same; "クレジットカード";
 		三井住友VISAカード;
 		ビックカメラSuicaカード;
-		JMBローソンPontaカード;
 		リクルートカード;
 	}
 
@@ -101,6 +100,8 @@ digraph "MoneyFlow"
 	三井住友VISAカード -> PiTaPa [style="bold", weight=100];
 	PiTaPa -> 大阪地下鉄 [style="bold", weight=100];
 	PiTaPa -> 山陽バス [style="bold", weight=100];
+	// iD
+	三井住友VISAカード -> iD [style="bold", weight=100];
 
 	// ビックカメラSuicaカード
 	ビックカメラSuicaカード -> ビューサンクスポイント;
@@ -111,15 +112,10 @@ digraph "MoneyFlow"
 	ビックカメラSuicaカード -> EX予約 [style="bold", weight=100];
 	Suica -> Suicaポイント -> Suica;
 
-	// JMBローソンPontaカード
-	JMBローソンPontaカード -> Ponta;
-	// iD
-	JMBローソンPontaカード -> iD [style="bold", weight=100];
-
 	// 住信SBI
 	住信SBI銀行 -> 現金 [style="bold", weight=100];
 	住信SBI銀行 -> 家賃 [style="bold", weight=100];
-	住信SBI銀行 -> JMBローソンPontaカード, ビックカメラSuicaカード, リクルートカード [style="bold", weight=100];
+	住信SBI銀行 -> ビックカメラSuicaカード, リクルートカード [style="bold", weight=100];
 
 	// リクルートカード
 	リクルートカード -> NHK, NTT, ASAHIネット [style="bold", weight=100];
