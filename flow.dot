@@ -51,6 +51,7 @@ digraph "MoneyFlow"
 	{
 		rank = same; "金券";
 		切符;
+		ぐるなびギフト券;
 	}
 
 	{
@@ -138,7 +139,8 @@ digraph "MoneyFlow"
 	// 現金
 	現金 -> 商店街 [style="bold", weight=100];
 	商店街 -> エコポイント -> 商店街;
-	現金 -> 餃子の王将 [style="bold", weight=100];
+	現金 -> ぐるなびギフト券 -> 餃子の王将 [style="bold", weight=100];
+	ぐるなびギフト券 -> 現金;
 	現金 -> ほっとはあと [style="bold", weight=100];
 
 	現金 -> 切符 -> 電車 [style="bold", weight=100];
