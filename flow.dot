@@ -81,6 +81,7 @@ digraph "MoneyFlow"
 		餃子の王将;
 		ほっとはあと;
 		FRESCO;
+		業務スーパー;
 		// ネット
 		Amazon;
 		iTunes;
@@ -144,6 +145,7 @@ digraph "MoneyFlow"
 	現金 -> ぐるなびギフト券 -> 餃子の王将 [style="bold", weight=100];
 	ぐるなびギフト券 -> 現金;
 	現金 -> ほっとはあと [style="bold", weight=100];
+	現金 -> 業務スーパー [style="bold", weight=100];
 
 	現金 -> 切符 -> 電車 [style="bold", weight=100];
 	切符 -> 現金;
