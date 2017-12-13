@@ -66,7 +66,6 @@ digraph "MoneyFlow"
 		電車;
 		大阪地下鉄;
 		山陽バス;
-		神姫バス;
 		// インフラ
 		NHK;
 		NTT;
@@ -114,7 +113,6 @@ digraph "MoneyFlow"
 	// PiTaPa
 	三井住友VISAカード -> PiTaPa [style="bold", weight=100];
 	PiTaPa -> 大阪地下鉄 [style="bold", weight=100];
-	PiTaPa -> 神姫バス [style="bold", weight=100];
 	PiTaPa -> 山陽バス [style="bold", weight=100];
 
 	// ビックカメラSuicaカード
