@@ -107,7 +107,6 @@ digraph "MoneyFlow"
 	PiTaPa -> 山陽バス [style="bold", weight=100];
 
 	// ビックカメラSuicaカード
-	三井住友銀行 -> ビックカメラSuicaカード [style="bold", weight=100];
 	ビックカメラSuicaカード -> ビューサンクスポイント;
 	ビックカメラSuicaカード -> ビックカメラ [style="bold", weight=100];
 	ビックカメラ -> ビックポイント;
@@ -134,7 +133,20 @@ digraph "MoneyFlow"
 	// 住信SBI
 	住信SBI銀行 -> 現金 [style="bold", weight=100];
 	住信SBI銀行 -> 家賃 [style="bold", weight=100];
-	住信SBI銀行 -> JMBローソンPontaカード [style="bold", weight=100];
+	住信SBI銀行 -> JMBローソンPontaカード, ビックカメラSuicaカード, リクルートカード [style="bold", weight=100];
+
+	// リクルートカード
+	リクルートカード -> NHK, NTT, ASAHIネット [style="bold", weight=100];
+	リクルートカード -> iTunes [style="bold", weight=100];
+	リクルートカード -> Amazon [style="bold", weight=100];
+	リクルートカード -> じゃらん [style="bold", weight=100];
+	リクルートカード -> アイハート [style="bold", weight=100];
+	リクルートカード -> Ponta;
+	Ponta -> じゃらん;
+	Amazon -> Amazonポイント -> Amazon;
+	リクルートカード -> nanaco [style="bold", weight=100];
+	nanaco -> セブンイレブン [style="bold", weight=100];
+	nanaco -> nanacoポイント -> nanaco;
 
 	// 現金
 	現金 -> 商店街 [style="bold", weight=100];
