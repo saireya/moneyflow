@@ -16,6 +16,7 @@ digraph "MoneyFlow"
 		rank = same; "銀行口座";
 		三井住友銀行;
 		三菱東京UFJ銀行;
+		住信SBI銀行;
 	}
 
 	{
@@ -91,7 +92,7 @@ digraph "MoneyFlow"
 	// SMBC
 	奨学金 -> 三井住友銀行 [style="bold", weight=100];
 	仕送り -> 三井住友銀行 [style="bold", weight=100];
-	三井住友銀行 -> 現金, 関西電力 [style="bold", weight=100];
+	三井住友銀行 -> 現金, 住信SBI銀行, 関西電力 [style="bold", weight=100];
 
 	// SMBC-Visa
 	三井住友銀行 -> 三井住友VISAカード [style="bold", weight=100];
@@ -130,7 +131,11 @@ digraph "MoneyFlow"
 
 	// UFJ
 	給与 -> 三菱東京UFJ銀行 [style="bold", weight=100];
-	三菱東京UFJ銀行 -> 家賃 [style="bold", weight=100];
+	三菱東京UFJ銀行 -> 住信SBI銀行 [style="bold", weight=100];
+
+	// 住信SBI
+	住信SBI銀行 -> 現金 [style="bold", weight=100];
+	住信SBI銀行 -> 家賃 [style="bold", weight=100];
 
 	// 現金
 	現金 -> 商店街 [style="bold", weight=100];
