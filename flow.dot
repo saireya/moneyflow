@@ -48,6 +48,7 @@ digraph "MoneyFlow"
 		Amazonポイント;
 		nanacoポイント;
 		FRESCOポイント;
+		ヨドバシゴールドポイント;
 	}
 
 	{
@@ -128,6 +129,7 @@ digraph "MoneyFlow"
 	Edy -> ファミリーマート [style="bold", weight=100];
 	ファミリーマート -> Tポイント;
 	Edy -> ヨドバシカメラ [style="bold", weight=100];
+	ヨドバシカメラ -> ヨドバシゴールドポイント -> ヨドバシカメラ;
 	Edy -> ウェルシア [style="bold", weight=100];
 	ウェルシア -> Tポイント;
 	Edy -> Ponta;
