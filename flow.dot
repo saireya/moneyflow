@@ -13,7 +13,6 @@ digraph "MoneyFlow"
 	{
 		rank = same; "銀行口座";
 		三井住友銀行;
-		三菱東京UFJ銀行;
 		住信SBI銀行;
 	}
 
