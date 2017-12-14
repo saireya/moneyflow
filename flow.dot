@@ -82,6 +82,8 @@ digraph "MoneyFlow"
 		ほっとはあと;
 		FRESCO;
 		業務スーパー;
+		松屋;
+		吉野家;
 		// ネット
 		Amazon;
 		iTunes;
@@ -109,6 +111,7 @@ digraph "MoneyFlow"
 	ビックカメラ -> ビックポイント [style="dashed"];
 	ビックカメラSuicaカード -> ビックポイント -> ビックカメラ;
 	ビックカメラSuicaカード -> Suica -> 電車 [style="bold", weight=100];
+	Suica -> 松屋 [style="bold", weight=100];
 	ビックカメラSuicaカード -> EX予約 [style="bold,dashed", weight=100];
 	Suica -> JREポイント -> Suica;
 
@@ -146,6 +149,8 @@ digraph "MoneyFlow"
 	ぐるなびギフト券 -> 現金;
 	現金 -> ほっとはあと [style="bold", weight=100];
 	現金 -> 業務スーパー [style="bold", weight=100];
+	現金 -> 吉野家 [style="bold", weight=100];
+	吉野家 -> Tポイント;
 
 	現金 -> 切符 -> 電車 [style="bold", weight=100];
 	切符 -> 現金;
