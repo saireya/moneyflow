@@ -101,6 +101,7 @@ digraph "MoneyFlow"
 	// PiTaPa
 	三井住友VISAカード -> PiTaPa [style="bold", weight=100];
 	PiTaPa -> 大阪地下鉄 [style="bold", weight=100];
+	大阪地下鉄 -> 三井住友VISAカード [label="10%"];
 	PiTaPa -> 山陽バス [style="bold,dashed", weight=100];
 	// iD
 	三井住友VISAカード -> iD [style="bold,dashed", weight=100];
