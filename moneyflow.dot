@@ -1,4 +1,4 @@
-// dot -Tsvg flow.dot -o flow.svg
+// dot -Tsvg moneyflow.dot -o moneyflow.svg
 // edge: bold: 支出, solid: 還元(label:還元率), dashed: Obsolete
 digraph "MoneyFlow"
 {
