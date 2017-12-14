@@ -41,9 +41,8 @@ digraph "MoneyFlow"
 		Tポイント;
 		// クレジットカード関係
 		ワールドプレゼントポイント;
-		ビューサンクスポイント;
-		// 独自ポイント
 		JREポイント;
+		// 独自ポイント
 		ビックポイント;
 		Amazonポイント;
 		nanacoポイント;
@@ -107,7 +106,7 @@ digraph "MoneyFlow"
 	三井住友VISAカード -> iD [style="bold,dashed", weight=100];
 
 	// ビックカメラSuicaカード
-	ビックカメラSuicaカード -> ビューサンクスポイント [label="0.5%"];
+	ビックカメラSuicaカード -> JREポイント [label="0.5%"];
 	ビックカメラSuicaカード -> ビックカメラ [style="bold,dashed", weight=100];
 	ビックカメラ -> ビックポイント [style="dashed", label="9.5%"];
 	ビックカメラSuicaカード -> ビックポイント [label="0.5%"]
@@ -115,9 +114,8 @@ digraph "MoneyFlow"
 	ビックカメラSuicaカード -> Suica -> 電車 [style="bold", weight=100];
 	Suica -> 松屋 [style="bold", weight=100];
 	ビックカメラSuicaカード -> EX予約 [style="bold,dashed", weight=100];
-	Suica -> JREポイント [label="0.5%"];
+	Suica -> JREポイント [label="1.5%"];
 	JREポイント -> Suica;
-	Suica -> ビューサンクスポイント [label="1%"];
 
 	// 住信SBI
 	住信SBI銀行 -> 現金 [style="bold", weight=100];
