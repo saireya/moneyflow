@@ -1,5 +1,5 @@
 // dot -Tsvg flow.dot -o flow.svg
-// edge: bold: 支出, solid: 還元, dashed: Obsolete
+// edge: bold: 支出, solid: 還元(label:還元率), dashed: Obsolete
 digraph "MoneyFlow"
 {
 	node [ shape = box ];
@@ -97,7 +97,7 @@ digraph "MoneyFlow"
 
 	// SMBC-Visa
 	三井住友銀行 -> 三井住友VISAカード [style="bold", weight=100];
-	三井住友VISAカード -> ワールドプレゼントポイント [style="dashed"];
+	三井住友VISAカード -> ワールドプレゼントポイント [style="dashed", label="0.5%"];
 	// PiTaPa
 	三井住友VISAカード -> PiTaPa [style="bold", weight=100];
 	PiTaPa -> 大阪地下鉄 [style="bold", weight=100];
@@ -106,14 +106,17 @@ digraph "MoneyFlow"
 	三井住友VISAカード -> iD [style="bold,dashed", weight=100];
 
 	// ビックカメラSuicaカード
-	ビックカメラSuicaカード -> ビューサンクスポイント;
+	ビックカメラSuicaカード -> ビューサンクスポイント [label="0.5%"];
 	ビックカメラSuicaカード -> ビックカメラ [style="bold,dashed", weight=100];
-	ビックカメラ -> ビックポイント [style="dashed"];
-	ビックカメラSuicaカード -> ビックポイント -> ビックカメラ;
+	ビックカメラ -> ビックポイント [style="dashed", label="9.5%"];
+	ビックカメラSuicaカード -> ビックポイント [label="0.5%"]
+	ビックポイント -> ビックカメラ;
 	ビックカメラSuicaカード -> Suica -> 電車 [style="bold", weight=100];
 	Suica -> 松屋 [style="bold", weight=100];
 	ビックカメラSuicaカード -> EX予約 [style="bold,dashed", weight=100];
-	Suica -> JREポイント -> Suica;
+	Suica -> JREポイント [label="0.5%"];
+	JREポイント -> Suica;
+	Suica -> ビューサンクスポイント [label="1%"];
 
 	// 住信SBI
 	住信SBI銀行 -> 現金 [style="bold", weight=100];
@@ -129,28 +132,32 @@ digraph "MoneyFlow"
 	リクルートカード -> Edy [style="bold", weight=100];
 	Edy -> ローソン [style="bold", weight=100];
 	Edy -> ファミリーマート [style="bold", weight=100];
-	ファミリーマート -> Tポイント;
+	ファミリーマート -> Tポイント [label="0.5%"];
 	Edy -> ヨドバシカメラ [style="bold", weight=100];
-	ヨドバシカメラ -> ヨドバシゴールドポイント -> ヨドバシカメラ;
+	ヨドバシカメラ -> ヨドバシゴールドポイント [label="10%"];
+	ヨドバシゴールドポイント -> ヨドバシカメラ;
 	Edy -> ウェルシア [style="bold", weight=100];
-	ウェルシア -> Tポイント;
-	Edy -> Ponta;
-	リクルートカード -> Ponta;
+	ウェルシア -> Tポイント [label="1%"];
+	Edy -> Ponta [label="0.5%"];
+	リクルートカード -> Ponta [label="1.2%"];
 	Ponta -> じゃらん;
+	じゃらん -> Ponta [label="2%"];
 	Amazon -> Amazonポイント -> Amazon;
 	リクルートカード -> nanaco [style="bold", weight=100];
 	nanaco -> セブンイレブン [style="bold", weight=100];
-	nanaco -> nanacoポイント -> nanaco;
+	nanaco -> nanacoポイント [label="1%"];
+	nanacoポイント -> nanaco;
 
 	// 現金
 	現金 -> FRESCO [style="bold", weight=100];
-	FRESCO -> FRESCOポイント -> FRESCO;
+	FRESCO -> FRESCOポイント [label="0.5%"];
+	FRESCOポイント -> FRESCO;
 	現金 -> ぐるなびギフト券 -> 餃子の王将 [style="bold", weight=100];
 	ぐるなびギフト券 -> 現金;
 	現金 -> 飲食店 [style="bold", weight=100];
 	現金 -> 業務スーパー [style="bold", weight=100];
 	現金 -> 吉野家 [style="bold", weight=100];
-	吉野家 -> Tポイント;
+	吉野家 -> Tポイント [label="0.5%"];
 
 	現金 -> 切符 -> 電車 [style="bold", weight=100];
 	切符 -> 現金;
