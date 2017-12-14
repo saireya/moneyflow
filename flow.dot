@@ -1,4 +1,5 @@
 // dot -Tsvg flow.dot -o flow.svg
+// edge: bold: 支出, solid: 還元, dashed: Obsolete
 digraph "MoneyFlow"
 {
 	node [ shape = box ];
@@ -94,21 +95,21 @@ digraph "MoneyFlow"
 
 	// SMBC-Visa
 	三井住友銀行 -> 三井住友VISAカード [style="bold", weight=100];
-	三井住友VISAカード -> ワールドプレゼントポイント;
+	三井住友VISAカード -> ワールドプレゼントポイント [style="dashed"];
 	// PiTaPa
 	三井住友VISAカード -> PiTaPa [style="bold", weight=100];
 	PiTaPa -> 大阪地下鉄 [style="bold", weight=100];
-	PiTaPa -> 山陽バス [style="bold", weight=100];
+	PiTaPa -> 山陽バス [style="bold,dashed", weight=100];
 	// iD
-	三井住友VISAカード -> iD [style="bold", weight=100];
+	三井住友VISAカード -> iD [style="bold,dashed", weight=100];
 
 	// ビックカメラSuicaカード
 	ビックカメラSuicaカード -> ビューサンクスポイント;
-	ビックカメラSuicaカード -> ビックカメラ [style="bold", weight=100];
-	ビックカメラ -> ビックポイント;
+	ビックカメラSuicaカード -> ビックカメラ [style="bold,dashed", weight=100];
+	ビックカメラ -> ビックポイント [style="dashed"];
 	ビックカメラSuicaカード -> ビックポイント -> ビックカメラ;
 	ビックカメラSuicaカード -> Suica -> 電車 [style="bold", weight=100];
-	ビックカメラSuicaカード -> EX予約 [style="bold", weight=100];
+	ビックカメラSuicaカード -> EX予約 [style="bold,dashed", weight=100];
 	Suica -> JREポイント -> Suica;
 
 	// 住信SBI
@@ -118,7 +119,7 @@ digraph "MoneyFlow"
 
 	// リクルートカード
 	リクルートカード -> NHK, NTT, ASAHIネット [style="bold", weight=100];
-	リクルートカード -> iTunes [style="bold", weight=100];
+	リクルートカード -> iTunes [style="bold,dashed", weight=100];
 	リクルートカード -> Amazon [style="bold", weight=100];
 	リクルートカード -> じゃらん [style="bold", weight=100];
 	リクルートカード -> アイハート [style="bold", weight=100];
