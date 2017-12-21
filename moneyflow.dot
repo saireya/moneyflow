@@ -132,6 +132,7 @@ digraph "MoneyFlow"
 	リクルートカード -> アイハート [style="bold", weight=100];
 	リクルートカード -> Edy [style="bold", weight=100];
 	Edy -> ローソン [style="bold", weight=100];
+	ローソン -> Ponta [label="1%"];
 	Edy -> ファミリーマート [style="bold", weight=100];
 	ファミリーマート -> Tポイント [label="0.5%"];
 	Edy -> ヨドバシカメラ [style="bold", weight=100];
