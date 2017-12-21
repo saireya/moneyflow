@@ -148,6 +148,7 @@ digraph "MoneyFlow"
 	nanaco -> セブンイレブン [style="bold", weight=100];
 	nanaco -> nanacoポイント [label="1%"];
 	nanacoポイント -> nanaco;
+	Edy -> 業務スーパー [style="bold", weight=100];
 
 	// 現金
 	現金 -> FRESCO [style="bold", weight=100];
@@ -156,7 +157,6 @@ digraph "MoneyFlow"
 	現金 -> ぐるなびギフト券 -> 餃子の王将 [style="bold", weight=100];
 	ぐるなびギフト券 -> 現金;
 	現金 -> 飲食店 [style="bold", weight=100];
-	現金 -> 業務スーパー [style="bold", weight=100];
 	現金 -> 吉野家 [style="bold", weight=100];
 	吉野家 -> Tポイント [label="0.5%"];
 
