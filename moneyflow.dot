@@ -52,7 +52,6 @@ digraph "MoneyFlow"
 	{
 		rank = same; "金券";
 		切符;
-		ぐるなびギフト券;
 	}
 
 	{
@@ -148,10 +147,9 @@ digraph "MoneyFlow"
 	Edy -> FRESCO [style="bold", weight=100];
 	FRESCO -> FRESCOポイント [label="0.5%"];
 	FRESCOポイント -> FRESCO;
+	Edy -> 餃子の王将 [style="bold", weight=100];
 
 	// 現金
-	現金 -> ぐるなびギフト券 -> 餃子の王将 [style="bold", weight=100];
-	ぐるなびギフト券 -> 現金;
 	現金 -> 飲食店 [style="bold", weight=100];
 	現金 -> 吉野家 [style="bold", weight=100];
 	吉野家 -> Tポイント [label="0.5%"];
