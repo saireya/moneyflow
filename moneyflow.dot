@@ -2,6 +2,7 @@
 // edge: bold: 支出, solid: 還元(label:還元率), dashed: Obsolete
 digraph "MoneyFlow"
 {
+	graph [ rankdir = LR ];
 	node [ shape = box ];
 
 	"収入", "銀行口座", "クレジットカード", "マネー", "ポイント", "金券", "支出" [shape = none];
