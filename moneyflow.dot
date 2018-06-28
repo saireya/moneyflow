@@ -2,6 +2,7 @@
 // edge: bold: 支出, solid: 還元(label:還元率), dashed: Obsolete
 digraph "MoneyFlow"
 {
+	graph [ rankdir = LR ];
 	node [ shape = box ];
 
 	"収入", "銀行口座", "クレジットカード", "マネー", "ポイント", "金券", "支出" [shape = none];
@@ -29,7 +30,6 @@ digraph "MoneyFlow"
 		Suica;
 		PiTaPa;
 		現金;
-		iD;
 		nanaco;
 		Edy;
 	}
@@ -48,12 +48,12 @@ digraph "MoneyFlow"
 		nanacoポイント;
 		FRESCOポイント;
 		ヨドバシゴールドポイント;
+		はぴeポイント;
 	}
 
 	{
 		rank = same; "金券";
 		切符;
-		ぐるなびギフト券;
 	}
 
 	{
@@ -93,17 +93,16 @@ digraph "MoneyFlow"
 	// SMBC
 	給与 -> 三井住友銀行 [style="bold", weight=100];
 	三井住友銀行 -> 現金, 住信SBI銀行, 関西電力 [style="bold", weight=100];
+	関西電力 -> はぴeポイント [label="0.8%, 0.5%"];
+	はぴeポイント -> Ponta [label="80%"];
 
 	// SMBC-Visa
 	三井住友銀行 -> 三井住友VISAカード [style="bold", weight=100];
-	三井住友VISAカード -> ワールドプレゼントポイント [style="dashed", label="0.5%"];
 	// PiTaPa
 	三井住友VISAカード -> PiTaPa [style="bold", weight=100];
 	PiTaPa -> 大阪地下鉄 [style="bold", weight=100];
 	大阪地下鉄 -> 三井住友VISAカード [label="10%"];
 	PiTaPa -> 山陽バス [style="bold,dashed", weight=100];
-	// iD
-	三井住友VISAカード -> iD [style="bold,dashed", weight=100];
 
 	// ビックカメラSuicaカード
 	ビックカメラSuicaカード -> JREポイント [label="0.5%"];
@@ -130,6 +129,7 @@ digraph "MoneyFlow"
 	リクルートカード -> アイハート [style="bold", weight=100];
 	リクルートカード -> Edy [style="bold", weight=100];
 	Edy -> ローソン [style="bold", weight=100];
+	ローソン -> Ponta [label="1%"];
 	Edy -> ファミリーマート [style="bold", weight=100];
 	ファミリーマート -> Tポイント [label="0.5%"];
 	Edy -> ヨドバシカメラ [style="bold", weight=100];
@@ -146,15 +146,14 @@ digraph "MoneyFlow"
 	nanaco -> セブンイレブン [style="bold", weight=100];
 	nanaco -> nanacoポイント [label="1%"];
 	nanacoポイント -> nanaco;
-
-	// 現金
-	現金 -> FRESCO [style="bold", weight=100];
+	Edy -> 業務スーパー [style="bold", weight=100];
+	Edy -> FRESCO [style="bold", weight=100];
 	FRESCO -> FRESCOポイント [label="0.5%"];
 	FRESCOポイント -> FRESCO;
-	現金 -> ぐるなびギフト券 -> 餃子の王将 [style="bold", weight=100];
-	ぐるなびギフト券 -> 現金;
+	Edy -> 餃子の王将 [style="bold", weight=100];
+
+	// 現金
 	現金 -> 飲食店 [style="bold", weight=100];
-	現金 -> 業務スーパー [style="bold", weight=100];
 	現金 -> 吉野家 [style="bold", weight=100];
 	吉野家 -> Tポイント [label="0.5%"];
 
