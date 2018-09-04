@@ -20,7 +20,6 @@ digraph "MoneyFlow"
 
 	{
 		rank = same; "クレジットカード";
-		三井住友VISAカード;
 		ビックカメラSuicaカード;
 		リクルートカード;
 	}
@@ -28,7 +27,6 @@ digraph "MoneyFlow"
 	{
 		rank = same; "マネー";
 		Suica;
-		PiTaPa;
 		現金;
 		nanaco;
 		Edy;
@@ -39,8 +37,6 @@ digraph "MoneyFlow"
 		// 共通ポイント
 		Ponta;
 		Tポイント;
-		// クレジットカード関係
-		ワールドプレゼントポイント;
 		JREポイント;
 		// 独自ポイント
 		ビックポイント;
@@ -54,6 +50,7 @@ digraph "MoneyFlow"
 	{
 		rank = same; "金券";
 		切符;
+		回数カード;
 	}
 
 	{
@@ -66,7 +63,6 @@ digraph "MoneyFlow"
 		// 交通
 		電車;
 		大阪地下鉄;
-		山陽バス;
 		// インフラ
 		NHK;
 		NTT;
@@ -95,15 +91,6 @@ digraph "MoneyFlow"
 	三井住友銀行 -> 現金, 住信SBI銀行, 関西電力 [style="bold", weight=100];
 	関西電力 -> はぴeポイント [label="0.8%, 0.5%"];
 	はぴeポイント -> Ponta [label="80%"];
-
-	// SMBC-Visa
-	三井住友銀行 -> 三井住友VISAカード [style="bold", weight=100];
-	三井住友VISAカード -> ワールドプレゼントポイント [style="dashed", label="0.5%"];
-	// PiTaPa
-	三井住友VISAカード -> PiTaPa [style="bold", weight=100];
-	PiTaPa -> 大阪地下鉄 [style="bold", weight=100];
-	大阪地下鉄 -> 三井住友VISAカード [label="10%"];
-	PiTaPa -> 山陽バス [style="bold,dashed", weight=100];
 
 	// ビックカメラSuicaカード
 	ビックカメラSuicaカード -> JREポイント [label="0.5%"];
@@ -160,4 +147,6 @@ digraph "MoneyFlow"
 
 	現金 -> 切符 -> 電車 [style="bold", weight=100];
 	切符 -> 現金;
+	現金 -> 回数カード -> 大阪地下鉄 [style="bold", weight=100];
+	回数カード -> 現金 [label="10%"];
 } 
