@@ -113,6 +113,8 @@ digraph "MoneyFlow"
 	ビックポイント -> ビックカメラ;
 	ビックカメラSuicaカード -> Suica -> 電車 [style="bold", weight=100];
 	Suica -> 松屋 [style="bold", weight=100];
+	Suica -> 吉野家 [style="bold", weight=100];
+	吉野家 -> Tポイント [label="0.5%"];
 	ビックカメラSuicaカード -> EX予約 [style="bold,dashed", weight=100];
 	Suica -> JREポイント [label="1.5%"];
 	JREポイント -> Suica;
@@ -155,9 +157,6 @@ digraph "MoneyFlow"
 
 	// 現金
 	現金 -> 飲食店 [style="bold", weight=100];
-	現金 -> 吉野家 [style="bold", weight=100];
-	吉野家 -> Tポイント [label="0.5%"];
-
 	現金 -> 切符 -> 電車 [style="bold", weight=100];
 	切符 -> 現金;
 } 
