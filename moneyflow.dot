@@ -131,6 +131,7 @@ digraph "MoneyFlow"
 	リクルートカード -> じゃらん [style="bold", weight=100];
 	リクルートカード -> アイハート [style="bold", weight=100];
 	リクルートカード -> Edy [style="bold", weight=100];
+	Edy -> ヤマト運輸 [style="bold", weight=100];
 	ヤマト運輸 -> Tポイント [label="0.5%"];
 	Edy -> ヨドバシカメラ [style="bold", weight=100];
 	ヨドバシカメラ -> ヨドバシゴールドポイント [label="10%"];
