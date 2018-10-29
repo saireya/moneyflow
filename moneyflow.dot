@@ -138,7 +138,7 @@ digraph "MoneyFlow"
 	ヨドバシゴールドポイント -> ヨドバシカメラ;
 	Edy -> ウェルシア [style="bold", weight=100];
 	ウェルシア -> Tポイント [label="1%"];
-	Edy -> 楽天スーパーポイント [label="0.5%"];
+	Edy -> Ponta [label="0.5%"];
 	楽天スーパーポイント -> Edy;
 	リクルートカード -> Ponta [label="1.2%"];
 	Ponta -> じゃらん;
