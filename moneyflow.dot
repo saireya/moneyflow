@@ -94,7 +94,7 @@ digraph "MoneyFlow"
 	給与 -> 三井住友銀行 [style="bold", weight=100];
 	三井住友銀行 -> 現金, 住信SBI銀行, 関西電力 [style="bold", weight=100];
 	関西電力 -> はぴeポイント [label="0.8%, 0.5%"];
-	はぴeポイント -> Ponta [label="80%"];
+	はぴeポイント -> 関西電力;
 
 	// SMBC-Visa
 	三井住友銀行 -> 三井住友VISAカード [style="bold", weight=100];
