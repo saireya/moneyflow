@@ -65,7 +65,6 @@ digraph "MoneyFlow"
 		大阪地下鉄;
 		// インフラ
 		NHK;
-		NTT;
 		ASAHIネット;
 		関西電力;
 		ヤマト運輸;
@@ -113,7 +112,7 @@ digraph "MoneyFlow"
 	住信SBI銀行 -> ビックカメラSuicaカード, リクルートカード [style="bold", weight=100];
 
 	// リクルートカード
-	リクルートカード -> NHK, NTT, ASAHIネット [style="bold", weight=100];
+	リクルートカード -> NHK, ASAHIネット [style="bold", weight=100];
 	リクルートカード -> iTunes [style="bold,dashed", weight=100];
 	リクルートカード -> Amazon [style="bold", weight=100];
 	リクルートカード -> じゃらん [style="bold", weight=100];
