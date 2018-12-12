@@ -53,6 +53,7 @@ digraph "MoneyFlow"
 		rank = same; "金券";
 		切符;
 		回数カード;
+		iTunesカード;
 	}
 
 	{
@@ -113,7 +114,6 @@ digraph "MoneyFlow"
 
 	// リクルートカード
 	リクルートカード -> NHK, ASAHIネット [style="bold", weight=100];
-	リクルートカード -> iTunes [style="bold,dashed", weight=100];
 	リクルートカード -> Amazon [style="bold", weight=100];
 	リクルートカード -> じゃらん [style="bold", weight=100];
 	リクルートカード -> アイハート [style="bold", weight=100];
@@ -135,6 +135,8 @@ digraph "MoneyFlow"
 	nanaco -> セブンイレブン [style="bold", weight=100];
 	nanaco -> nanacoポイント [label="1%"];
 	nanacoポイント -> nanaco;
+	nanaco -> iTunesカード [style="bold", weight=100];
+	iTunesカード -> iTunes [style="bold", weight=100];
 	Edy -> 業務スーパー [style="bold", weight=100];
 	Edy -> FRESCO [style="bold", weight=100];
 	FRESCO -> FRESCOポイント [label="0.5%"];
