@@ -22,6 +22,7 @@ digraph "MoneyFlow"
 		rank = same; "クレジットカード";
 		ビックカメラSuicaカード;
 		リクルートカード;
+		PiTaPa;
 	}
 
 	{
@@ -51,8 +52,7 @@ digraph "MoneyFlow"
 
 	{
 		rank = same; "金券";
-		切符;
-		回数カード;
+		株主優待券;
 		iTunesカード;
 	}
 
@@ -63,12 +63,14 @@ digraph "MoneyFlow"
 		セブンイレブン;
 		// 交通
 		電車;
-		大阪地下鉄;
+		バス;
 		// インフラ
 		ASAHIネット;
 		楽天モバイル;
+		楽天でんき;
 		関西電力;
 		ヤマト運輸;
+		楽天損保;
 		// 店舗
 		アイハート;
 		ウェルシア;
@@ -113,13 +115,15 @@ digraph "MoneyFlow"
 	// 住信SBI
 	住信SBI銀行 -> 現金 [style="bold", weight=100];
 	住信SBI銀行 -> 家賃 [style="bold", weight=100];
-	住信SBI銀行 -> ビックカメラSuicaカード, リクルートカード [style="bold", weight=100];
+	住信SBI銀行 -> ビックカメラSuicaカード, リクルートカード, PiTaPa [style="bold", weight=100];
 
 	// リクルートカード
 	リクルートカード -> ASAHIネット [style="bold", weight=100];
 	リクルートカード -> Amazon [style="bold", weight=100];
 	リクルートカード -> じゃらん [style="bold", weight=100];
 	リクルートカード -> アイハート [style="bold", weight=100];
+	リクルートカード -> 楽天でんき [style="bold", weight=100];
+	リクルートカード -> 楽天損保 [style="bold", weight=100];
 	リクルートカード -> Edy [style="bold", weight=100];
 	Edy -> ヤマト運輸 [style="bold", weight=100];
 	ヤマト運輸 -> Tポイント [label="0.5%"];
@@ -128,6 +132,7 @@ digraph "MoneyFlow"
 	ヨドバシゴールドポイント -> ヨドバシカメラ;
 	Edy -> ウェルシア [style="bold", weight=100];
 	ウェルシア -> Tポイント [label="1%"];
+	Tポイント -> はぴeポイント;
 	Edy -> 楽天ポイント [label="0.5%"];
 	リクルートカード -> Ponta [label="1.2%"];
 	Ponta -> じゃらん;
@@ -145,10 +150,15 @@ digraph "MoneyFlow"
 	FRESCOポイント -> FRESCO;
 	Edy -> 餃子の王将 [style="bold", weight=100];
 
+	// PiTaPa
+	PiTaPa -> 電車 [style="bold", weight=100];
+	電車 -> PiTaPa [label="10%"];
+	PiTaPa -> バス [style="bold", weight=100];
+	バス -> PiTaPa [label="10%"];
+
 	// 現金
 	現金 -> 飲食店 [style="bold", weight=100];
-	現金 -> 切符 -> 電車 [style="bold", weight=100];
-	切符 -> 現金;
-	現金 -> 回数カード -> 大阪地下鉄 [style="bold", weight=100];
-	回数カード -> 現金 [label="10%"];
+	現金 -> 株主優待券 [style="bold", weight=100];
+	株主優待券 -> 電車 [style="bold", weight=100];
+	株主優待券 -> 現金;
 } 
