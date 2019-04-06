@@ -37,6 +37,7 @@ digraph "MoneyFlow"
 		// 共通ポイント
 		Ponta;
 		Tポイント;
+		楽天ポイント;
 		// クレジットカード関係
 		JREポイント;
 		// 独自ポイント
@@ -66,6 +67,7 @@ digraph "MoneyFlow"
 		// インフラ
 		NHK;
 		ASAHIネット;
+		楽天モバイル;
 		関西電力;
 		ヤマト運輸;
 		// 店舗
@@ -105,6 +107,9 @@ digraph "MoneyFlow"
 	ビックカメラSuicaカード -> EX予約 [style="bold,dashed", weight=100];
 	Suica -> JREポイント [label="1.5%"];
 	JREポイント -> Suica;
+	ビックカメラSuicaカード -> 楽天モバイル [style="bold", weight=100];
+	楽天モバイル -> 楽天ポイント [label="0.5%"];
+	楽天ポイント -> 楽天モバイル;
 
 	// 住信SBI
 	住信SBI銀行 -> 現金 [style="bold", weight=100];
@@ -124,7 +129,7 @@ digraph "MoneyFlow"
 	ヨドバシゴールドポイント -> ヨドバシカメラ;
 	Edy -> ウェルシア [style="bold", weight=100];
 	ウェルシア -> Tポイント [label="1%"];
-	Edy -> Ponta [label="0.5%"];
+	Edy -> 楽天ポイント [label="0.5%"];
 	リクルートカード -> Ponta [label="1.2%"];
 	Ponta -> じゃらん;
 	じゃらん -> Ponta [label="2%"];
