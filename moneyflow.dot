@@ -108,7 +108,7 @@ digraph "MoneyFlow"
 	JREポイント -> Suica;
 	ビックカメラSuicaカード -> 楽天モバイル [style="bold", weight=100];
 	楽天モバイル -> 楽天ポイント [label="0.5%"];
-	楽天ポイント -> 楽天モバイル;
+	楽天ポイント -> 楽天モバイル, 楽天でんき;
 
 	// 住信SBI
 	住信SBI銀行 -> 現金 [style="bold", weight=100];
