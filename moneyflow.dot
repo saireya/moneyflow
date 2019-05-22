@@ -91,9 +91,7 @@ digraph "MoneyFlow"
 
 	// SMBC
 	給与 -> 三井住友銀行 [style="bold", weight=100];
-	三井住友銀行 -> 現金, 住信SBI銀行, 関西電力 [style="bold", weight=100];
-	関西電力 -> はぴeポイント [label="0.8%, 0.5%"];
-	はぴeポイント -> 関西電力;
+	三井住友銀行 -> 現金, 住信SBI銀行 [style="bold", weight=100];
 
 	// ビックカメラSuicaカード
 	ビックカメラSuicaカード -> JREポイント [label="0.5%"];
@@ -122,6 +120,9 @@ digraph "MoneyFlow"
 	リクルートカード -> Amazon [style="bold", weight=100];
 	リクルートカード -> じゃらん [style="bold", weight=100];
 	リクルートカード -> アイハート [style="bold", weight=100];
+	リクルートカード -> 関西電力 [style="bold", weight=100];
+	関西電力 -> はぴeポイント [label="0.8%, 0.5%"];
+	はぴeポイント -> 関西電力;
 	リクルートカード -> 楽天でんき [style="bold", weight=100];
 	リクルートカード -> 楽天損保 [style="bold", weight=100];
 	リクルートカード -> Edy [style="bold", weight=100];
