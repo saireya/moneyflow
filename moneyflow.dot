@@ -10,6 +10,7 @@ digraph "MoneyFlow"
 	{
 		rank = same; "収入";
 		給与;
+		譲渡;
 	}
 
 	{
@@ -32,6 +33,7 @@ digraph "MoneyFlow"
 		nanaco;
 		Edy;
 		PayPay;
+		メルペイ;
 	}
 
 	{
@@ -87,6 +89,7 @@ digraph "MoneyFlow"
 		Amazon;
 		EX予約;
 		じゃらん;
+		メルカリ;
 	}
 
 	// SMBC
@@ -164,4 +167,10 @@ digraph "MoneyFlow"
 	現金 -> 昼間回数券 [style="bold", weight=100];
 	昼間回数券 -> 現金;
 	昼間回数券 -> バス [style="bold", weight=100];
-} 
+
+	// 譲渡
+	譲渡 -> メルペイ [style="bold", weight=100];
+	メルペイ -> メルカリ [style="bold", weight=100];
+	メルペイ -> 三井住友銀行 [style="bold", weight=100];
+	リクルートカード -> メルカリ [style="bold", weight=100];
+}
