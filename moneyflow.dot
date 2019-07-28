@@ -115,6 +115,9 @@ digraph "MoneyFlow"
 	住信SBI銀行 -> 現金 [style="bold", weight=100];
 	住信SBI銀行 -> 家賃 [style="bold", weight=100];
 	住信SBI銀行 -> ビックカメラSuicaカード, リクルートカード, PiTaPa [style="bold", weight=100];
+	住信SBI銀行 -> 株主優待券 [style="bold", weight=100];
+	株主優待券 -> 電車 [style="bold", weight=100];
+	株主優待券 -> 住信SBI銀行;
 
 	// リクルートカード
 	リクルートカード -> ASAHIネット [style="bold", weight=100];
@@ -162,9 +165,6 @@ digraph "MoneyFlow"
 
 	// 現金
 	現金 -> 飲食店 [style="bold", weight=100];
-	現金 -> 株主優待券 [style="bold", weight=100];
-	株主優待券 -> 電車 [style="bold", weight=100];
-	株主優待券 -> 現金;
 	現金 -> 昼間回数券 [style="bold", weight=100];
 	昼間回数券 -> 現金;
 	昼間回数券 -> バス [style="bold", weight=100];
