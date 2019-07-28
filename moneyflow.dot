@@ -11,6 +11,7 @@ digraph "MoneyFlow"
 		rank = same; "収入";
 		給与;
 		譲渡;
+		雑収入;
 	}
 
 	{
@@ -173,4 +174,7 @@ digraph "MoneyFlow"
 	メルペイ -> メルカリ [style="bold", weight=100];
 	メルペイ -> 三井住友銀行 [style="bold", weight=100];
 	リクルートカード -> メルカリ [style="bold", weight=100];
+
+	// 雑収入
+	雑収入 -> 楽天ポイント [style="bold", weight=100];
 }
