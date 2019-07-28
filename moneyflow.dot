@@ -54,6 +54,7 @@ digraph "MoneyFlow"
 	{
 		rank = same; "金券";
 		株主優待券;
+		昼間回数券;
 	}
 
 	{
@@ -160,4 +161,7 @@ digraph "MoneyFlow"
 	現金 -> 株主優待券 [style="bold", weight=100];
 	株主優待券 -> 電車 [style="bold", weight=100];
 	株主優待券 -> 現金;
+	現金 -> 昼間回数券 [style="bold", weight=100];
+	昼間回数券 -> 現金;
+	昼間回数券 -> バス [style="bold", weight=100];
 } 
