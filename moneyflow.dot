@@ -31,6 +31,7 @@ digraph "MoneyFlow"
 		現金;
 		nanaco;
 		Edy;
+		PayPay;
 	}
 
 	{
@@ -92,6 +93,8 @@ digraph "MoneyFlow"
 	// SMBC
 	給与 -> 三井住友銀行 [style="bold", weight=100];
 	三井住友銀行 -> 現金, 住信SBI銀行 [style="bold", weight=100];
+	三井住友銀行 -> PayPay [style="bold", weight=100];
+	PayPay -> 飲食店 [style="bold", weight=100];
 
 	// ビックカメラSuicaカード
 	ビックカメラSuicaカード -> JREポイント [label="0.5%"];
