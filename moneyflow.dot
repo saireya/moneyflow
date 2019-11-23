@@ -41,7 +41,6 @@ digraph "MoneyFlow"
 		rank = same; "ポイント";
 		// 共通ポイント
 		Ponta;
-		Tポイント;
 		楽天ポイント;
 		// クレジットカード関係
 		JREポイント;
@@ -134,12 +133,10 @@ digraph "MoneyFlow"
 	楽天ポイント -> 楽天モバイル, 楽天でんき;
 	リクルートカード -> Edy [style="bold", weight=100];
 	Edy -> ヤマト運輸 [style="bold", weight=100];
-	ヤマト運輸 -> Tポイント [label="0.5%"];
 	Edy -> ヨドバシカメラ [style="bold", weight=100];
 	ヨドバシカメラ -> ヨドバシゴールドポイント [label="10%"];
 	ヨドバシゴールドポイント -> ヨドバシカメラ;
 	Edy -> ウェルシア [style="bold", weight=100];
-	ウェルシア -> Tポイント [label="1%"];
 	Edy -> 吉野家 [style="bold", weight=100];
 	Edy -> 楽天ポイント [label="0.5%"];
 	リクルートカード -> Ponta [label="1.2%"];
