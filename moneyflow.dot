@@ -48,7 +48,6 @@ digraph "MoneyFlow"
 		ビックポイント;
 		Amazonポイント;
 		nanacoポイント;
-		FRESCOポイント;
 		ヨドバシゴールドポイント;
 		はぴeポイント;
 	}
@@ -56,7 +55,6 @@ digraph "MoneyFlow"
 	{
 		rank = same; "金券";
 		株主優待券;
-		昼間回数券;
 	}
 
 	{
@@ -66,25 +64,24 @@ digraph "MoneyFlow"
 		セブンイレブン;
 		// 交通
 		電車;
-		バス;
 		// インフラ
 		ASAHIネット;
 		楽天モバイル;
 		楽天でんき;
 		関西電力;
-		ヤマト運輸;
 		楽天損保;
+		郵便局;
 		// 店舗
 		アイハート;
-		ウェルシア;
 		ビックカメラ;
 		ヨドバシカメラ;
 		餃子の王将;
 		飲食店;
-		FRESCO;
 		業務スーパー;
 		松屋;
 		吉野家;
+		理髪店;
+		クリーニング;
 		// ネット
 		Amazon;
 		EX予約;
@@ -132,11 +129,9 @@ digraph "MoneyFlow"
 	楽天モバイル -> 楽天ポイント [label="0.5%"];
 	楽天ポイント -> 楽天モバイル, 楽天でんき;
 	リクルートカード -> Edy [style="bold", weight=100];
-	Edy -> ヤマト運輸 [style="bold", weight=100];
 	Edy -> ヨドバシカメラ [style="bold", weight=100];
 	ヨドバシカメラ -> ヨドバシゴールドポイント [label="10%"];
 	ヨドバシゴールドポイント -> ヨドバシカメラ;
-	Edy -> ウェルシア [style="bold", weight=100];
 	Edy -> 吉野家 [style="bold", weight=100];
 	Edy -> 楽天ポイント [label="0.5%"];
 	リクルートカード -> Ponta [label="1.2%"];
@@ -148,22 +143,13 @@ digraph "MoneyFlow"
 	nanaco -> nanacoポイント [label="1%"];
 	nanacoポイント -> nanaco;
 	Edy -> 業務スーパー [style="bold", weight=100];
-	Edy -> FRESCO [style="bold", weight=100];
-	FRESCO -> FRESCOポイント [label="0.5%"];
-	FRESCOポイント -> FRESCO;
 	Edy -> 餃子の王将 [style="bold", weight=100];
-
-	// PiTaPa
-	PiTaPa -> 電車 [style="bold", weight=100];
-	電車 -> PiTaPa [label="10%"];
-	PiTaPa -> バス [style="bold", weight=100];
-	バス -> PiTaPa [label="10%"];
+	リクルートカード -> 郵便局 [style="bold", weight=100];
 
 	// 現金
 	現金 -> 飲食店 [style="bold", weight=100];
-	現金 -> 昼間回数券 [style="bold", weight=100];
-	昼間回数券 -> 現金;
-	昼間回数券 -> バス [style="bold", weight=100];
+	現金 -> 理髪店 [style="bold", weight=100];
+	現金 -> クリーニング [style="bold", weight=100];
 
 	// 譲渡
 	譲渡 -> メルペイ [style="bold", weight=100];
