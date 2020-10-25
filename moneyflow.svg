@@ -545,7 +545,7 @@
 <title>nanaco&#45;&gt;nanacoポイント</title>
 <path fill="none" stroke="black" d="M496.89,-583.61C503,-559.92 517.35,-519.69 547,-502 561.12,-493.58 570.15,-493.14 584,-502 600.08,-512.29 587.54,-528.54 602,-541 608.47,-546.57 616.03,-551 624,-554.51"/>
 <polygon fill="black" stroke="black" points="622.91,-557.84 633.5,-558.23 625.46,-551.32 622.91,-557.84"/>
-<text text-anchor="middle" x="565.5" y="-505.8" font-family="Times,serif" font-size="14.00">1%</text>
+<text text-anchor="middle" x="565.5" y="-505.8" font-family="Times,serif" font-size="14.00">0.5%</text>
 </g>
 <!-- セブンイレブン -->
 <g id="node32" class="node">
