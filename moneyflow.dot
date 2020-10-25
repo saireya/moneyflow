@@ -92,8 +92,6 @@ digraph "MoneyFlow"
 	// SMBC
 	給与 -> 三井住友銀行 [style="bold", weight=100];
 	三井住友銀行 -> 現金, 住信SBI銀行 [style="bold", weight=100];
-	三井住友銀行 -> PayPay [style="bold", weight=100];
-	PayPay -> 飲食店 [style="bold", weight=100];
 
 	// ビックカメラSuicaカード
 	ビックカメラSuicaカード -> JREポイント [label="0.5%"];
@@ -111,6 +109,8 @@ digraph "MoneyFlow"
 	住信SBI銀行 -> 現金 [style="bold", weight=100];
 	住信SBI銀行 -> 家賃 [style="bold", weight=100];
 	住信SBI銀行 -> ビックカメラSuicaカード, リクルートカード, PiTaPa [style="bold", weight=100];
+	住信SBI銀行 -> PayPay [style="bold", weight=100];
+	PayPay -> 飲食店 [style="bold", weight=100];
 	住信SBI銀行 -> 株主優待券 [style="bold", weight=100];
 	株主優待券 -> 電車 [style="bold", weight=100];
 	株主優待券 -> 住信SBI銀行;
