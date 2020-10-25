@@ -160,4 +160,5 @@ digraph "MoneyFlow"
 
 	// 雑収入
 	雑収入 -> 楽天ポイント [style="bold", weight=100];
+	雑収入 -> Ponta [style="bold", weight=100];
 }
