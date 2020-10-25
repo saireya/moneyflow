@@ -87,6 +87,7 @@ digraph "MoneyFlow"
 		EX予約;
 		じゃらん;
 		メルカリ;
+		楽天市場;
 	}
 
 	// SMBC
@@ -125,6 +126,8 @@ digraph "MoneyFlow"
 	はぴeポイント -> 関西電力;
 	リクルートカード -> 楽天でんき [style="bold", weight=100];
 	リクルートカード -> 楽天損保 [style="bold", weight=100];
+	リクルートカード -> 楽天市場 [style="bold", weight=100];
+	楽天市場 -> 楽天ポイント [label="3%"];
 	リクルートカード -> 楽天モバイル [style="bold", weight=100];
 	楽天モバイル -> 楽天ポイント [label="0.5%"];
 	楽天ポイント -> 楽天モバイル, 楽天でんき;
