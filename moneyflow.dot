@@ -75,7 +75,6 @@ digraph "MoneyFlow"
 		アイハート;
 		ビックカメラ;
 		ヨドバシカメラ;
-		餃子の王将;
 		飲食店;
 		業務スーパー;
 		松屋;
@@ -146,7 +145,6 @@ digraph "MoneyFlow"
 	nanaco -> nanacoポイント [label="1%"];
 	nanacoポイント -> nanaco;
 	Edy -> 業務スーパー [style="bold", weight=100];
-	Edy -> 餃子の王将 [style="bold", weight=100];
 	リクルートカード -> 郵便局 [style="bold", weight=100];
 	Edy -> セブンイレブン [style="bold", weight=100];
 
