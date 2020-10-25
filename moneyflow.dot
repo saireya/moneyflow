@@ -85,6 +85,7 @@ digraph "MoneyFlow"
 		Amazon;
 		EX予約;
 		じゃらん;
+		ホットペッパー;
 		メルカリ;
 		楽天市場;
 	}
@@ -140,6 +141,8 @@ digraph "MoneyFlow"
 	リクルートカード -> Ponta [label="1.2%"];
 	Ponta -> じゃらん;
 	じゃらん -> Ponta [label="2%"];
+	Ponta -> ホットペッパー;
+	ホットペッパー -> Ponta;
 	Amazon -> Amazonポイント -> Amazon;
 	リクルートカード -> nanaco [style="bold", weight=100];
 	nanaco -> セブンイレブン [style="bold", weight=100];
