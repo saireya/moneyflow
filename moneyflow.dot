@@ -124,6 +124,7 @@ digraph "MoneyFlow"
 	関西電力 -> はぴeポイント [label="0.5%"];
 	はぴeポイント -> 関西電力;
 	リクルートカード -> 楽天でんき [style="bold", weight=100];
+	楽天でんき -> 楽天ポイント [label="0.5%"];
 	リクルートカード -> 楽天損保 [style="bold", weight=100];
 	リクルートカード -> 楽天市場 [style="bold", weight=100];
 	楽天市場 -> 楽天ポイント [label="3%"];
