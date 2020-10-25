@@ -145,6 +145,7 @@ digraph "MoneyFlow"
 	Edy -> 業務スーパー [style="bold", weight=100];
 	Edy -> 餃子の王将 [style="bold", weight=100];
 	リクルートカード -> 郵便局 [style="bold", weight=100];
+	Edy -> セブンイレブン [style="bold", weight=100];
 
 	// 現金
 	現金 -> 飲食店 [style="bold", weight=100];
