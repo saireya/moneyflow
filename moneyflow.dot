@@ -65,7 +65,6 @@ digraph "MoneyFlow"
 		// 交通
 		電車;
 		// インフラ
-		ASAHIネット;
 		楽天モバイル;
 		楽天でんき;
 		関西電力;
@@ -77,8 +76,6 @@ digraph "MoneyFlow"
 		ヨドバシカメラ;
 		飲食店;
 		業務スーパー;
-		松屋;
-		吉野家;
 		理髪店;
 		クリーニング;
 		// ネット
@@ -101,7 +98,6 @@ digraph "MoneyFlow"
 	ビックカメラSuicaカード -> ビックポイント [label="0.5%"]
 	ビックポイント -> ビックカメラ;
 	ビックカメラSuicaカード -> Suica -> 電車 [style="bold", weight=100];
-	Suica -> 松屋 [style="bold", weight=100];
 	ビックカメラSuicaカード -> EX予約 [style="bold,dashed", weight=100];
 	Suica -> JREポイント [label="1.5%"];
 	JREポイント -> Suica;
@@ -117,7 +113,6 @@ digraph "MoneyFlow"
 	株主優待券 -> 住信SBI銀行;
 
 	// リクルートカード
-	リクルートカード -> ASAHIネット [style="bold", weight=100];
 	リクルートカード -> Amazon [style="bold", weight=100];
 	リクルートカード -> じゃらん [style="bold", weight=100];
 	リクルートカード -> アイハート [style="bold", weight=100];
@@ -136,7 +131,6 @@ digraph "MoneyFlow"
 	Edy -> ヨドバシカメラ [style="bold", weight=100];
 	ヨドバシカメラ -> ヨドバシゴールドポイント [label="10%"];
 	ヨドバシゴールドポイント -> ヨドバシカメラ;
-	Edy -> 吉野家 [style="bold", weight=100];
 	Edy -> 楽天ポイント [label="0.5%"];
 	リクルートカード -> Ponta [label="1.2%"];
 	Ponta -> じゃらん;
